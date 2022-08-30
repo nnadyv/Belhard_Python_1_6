@@ -20,3 +20,30 @@ school_data = {
     '2a': 13,
     '2b': 30
 }
+
+
+def incr_students(school_data, klass):
+    school_data[klass] = school_data.get(klass) + 1
+    students = school_data.get(klass)
+    return students
+
+
+def decr_students(school_data, klass):
+    school_data[klass] = school_data.get(klass) - 1 and school_data[klass] >= 0
+    students = school_data.get(klass)
+    return students
+
+
+def add_class(school_data, klass):
+    school_data[klass] = 0
+    return school_data
+
+
+def remove_class(school_data, klass):
+    school_data.pop(klass)
+    return school_data
+
+
+def calc_students(school_data, klass):
+    summa = sum(school_data)
+    return summa
